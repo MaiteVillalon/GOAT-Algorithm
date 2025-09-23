@@ -1,9 +1,9 @@
 # Metaheuristics/imports.py
 
 # --- Importaciones de las implementaciones
-
+from .Codes.GOAT import iterarGOAT
 from .Codes.AOA import iterarAOA
-from .Codes.EBWOA import iterarEBWOA
+from .Codes.EBWOA import iterarEBWOA 
 from .Codes.EOO import iterarEOO
 from .Codes.FLO import iterarFLO
 from .Codes.FOX import iterarFOX
@@ -44,6 +44,7 @@ metaheuristics = {
     "FOX": iterarFOX,
     "GA": iterarGA,
     "GOA": iterarGOA,
+    "GOAT": iterarGOAT,
     "GWO": iterarGWO,
     "HBA": iterarHBA,
     "HLOA_BEN": iterarHLOABen,
@@ -96,6 +97,7 @@ MH_ARG_MAP = {
     # G
     'GA':    ('population', 'fitness', 'cross', 'muta'),
     'GOA':   ('maxIter', 'iter', 'dim', 'population', 'best', 'fitness', 'fo', 'objective_type'),
+    'GOAT': ('maxIter', 'iter', 'dim', 'population', 'best', 'fitness','fo', 'lb', 'ub','jump_prob', 'filter_ratio', 'objective_type'),
     'GOOSE': ('dim', 'population', 'best'),
     'GOOSE2': ('maxIter', 'iter', 'dim', 'population', 'best'),
     'GWO':   ('maxIter', 'iter', 'dim', 'population', 'fitness', 'objective_type'),

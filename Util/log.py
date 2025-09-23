@@ -41,7 +41,7 @@ def log_progress(iter, maxIter, bestFitness, optimo, timeEjecuted, XPT, XPL, div
         print(f"Error al escribir en el archivo de resultados: {e}")
 
     # Imprimir en consola solo según la condición
-    if (iter) % (maxIter // 4) == 0:
+    if iter % 10 == 0 or iter == 1 or iter == maxIter:
         msg = (
             f"Iteración: {iter:<4} | "
             f"Mejor Fitness: {bestFitness:>7.2e} | "
